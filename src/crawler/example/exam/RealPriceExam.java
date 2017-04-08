@@ -30,7 +30,7 @@ public class RealPriceExam {
 		Document jsoupDoc = CrawlerPack.start()
 				.getFromXml(uri);
 
-		// 印出整份 XML 資料
+		// 印出一整份 XML 資料
 //		System.out.println(jsoupDoc.toString());
 
 		// print head
