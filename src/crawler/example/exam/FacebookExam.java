@@ -13,27 +13,27 @@ import org.jsoup.select.Elements;
  * 1. 先利用Graph Api調整出需要的資料
  * 2. 修改程式，使用爬蟲包取得資料
  * 3. 上傳至GitHub
- * 
+ *
  * @author Abola Lee
  *
  */
 public class FacebookExam {
-	
+
 	public static void main(String[] args) {
-		
+
 		// 遠端資料路徑
 
-		String uri = 
+		String uri =
 				"https://graph.facebook.com/v2.6"
-				+ "/imDataMan/feed?fields=id,reactions.limit(0).summary(total_count)"
-				+ "&access_token=EAASmZB2DffOgBAKMeIbQUlMYgfglgwutLx5ZAzZAtJRXzHEOxrGNq3wMLt8yGjN0xZBDjS8fvcUOVuH2lcqvHQEByXMMhjyFOBy0j0P9oLPiUdnqFl66lApm8HucEcZB2fOKS4LZCNAx3YL0SqpmTAJ4ZBZCWHZAAkEKZBhWGvCEEPOqRQAGtQCY5CVginVe0GilUZD";
+						+ "/imDataMan/feed?fields=id,reactions.limit(0).summary(total_count)"
+						+ "&access_token=1309498499103976%7CfFgr9gSFPFcDS8pX4BnwcBzDB8U";
 
 
 		Elements elems =
 				CrawlerPack.start()
-				.getFromJson(uri)
-				.select("data");
-		
+						.getFromJson(uri)
+						.select("data");
+
 		String output = "id,reactions\n";
 
 		// 逐筆處理
@@ -48,5 +48,5 @@ public class FacebookExam {
 		}
 
 		System.out.println( output );
-	} 
+	}
 }
