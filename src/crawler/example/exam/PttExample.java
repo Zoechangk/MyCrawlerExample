@@ -34,7 +34,7 @@ public class PttExample {
 			    .getFromHtml(uri)
 			    //.getFromXml(uri)
 			    
-			    // 這兒開始是 Jsoup Document 物件操作
+			    // 這裡開始是 Jsoup Document 物件操作
 
 				.select("#main-content.bbs-screen.bbs-content");
 				jsoup.select("div,span").remove();
